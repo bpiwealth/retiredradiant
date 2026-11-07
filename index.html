@@ -286,6 +286,61 @@ canvas{display:block;max-width:100%}
 .empty-icon{font-size:2.2rem;margin-bottom:10px;opacity:.5}
 .empty-state p{font-size:.83rem;line-height:1.6;max-width:320px;margin:0 auto}
 
+
+/* ── SAMPLE PORTFOLIO ── */
+.verdict.pf::before{background:linear-gradient(90deg,var(--gold-dk),var(--gold))}
+.verdict.pf{background:linear-gradient(135deg,var(--gold-bg),#fffdf8)}
+.verdict.pf .verdict-lbl{color:var(--gold-dk)}
+.pf-amt{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
+.pf-amt .field{flex:1;min-width:220px;margin:0}
+.pf-amt input{height:44px;font-size:1rem;font-weight:700}
+.pf-amt .pre{font-size:.9rem}
+.pf-amt input.pl{padding-left:26px}
+.pf-chips{display:flex;gap:8px;flex-wrap:wrap}
+.pf-chip{height:32px;padding:0 12px;border-radius:16px;border:1.5px solid var(--gold-bdr);background:var(--gold-bg);color:var(--gold-dk);font-family:var(--font);font-size:.72rem;font-weight:700;cursor:pointer}
+.pf-chip:hover{border-color:var(--gold);background:#fbf1d8}
+.pf-table{width:100%;border-collapse:collapse;font-size:.78rem}
+.pf-table th{background:var(--ruby);color:#fff;padding:9px 10px;font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-align:right;white-space:nowrap}
+.pf-table th:first-child{text-align:left;width:auto}
+.pf-table td{padding:8px 10px;border-bottom:1px solid #f0eeeb;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pf-table td:first-child{text-align:left;white-space:normal;min-width:190px}
+.pf-table td:first-child .pf-dot{flex-shrink:0}
+.pf-table tbody td:first-child{color:var(--g800);font-size:.78rem;font-weight:600}
+.pf-table tr.grp td:first-child,.pf-table tr.tot td:first-child{font-weight:800}
+.pf-table tr.meta td:first-child{color:var(--g600);font-weight:700}
+.pf-table tr.sub td:first-child,.pf-table tr.grp td:first-child,.pf-table tr.meta td:first-child{white-space:nowrap}
+.cf-table td:first-child{min-width:60px}
+.pf-table tr.grp td{background:var(--g50);font-weight:800;color:var(--g800)}
+.pf-table tr.sub td:first-child{padding-left:26px}
+.pf-table tr.tot td{font-weight:800;background:var(--gold-bg);border-top:2px solid var(--gold);border-bottom:none}
+.pf-table tr.meta td{font-weight:700;color:var(--g600);border-bottom:none}
+.pf-wrap{overflow-x:auto;border-radius:var(--r-sm);border:1px solid #eeecea;-webkit-overflow-scrolling:touch}
+.pf-dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:-1px}
+.pf-stack{display:flex;height:16px;border-radius:8px;overflow:hidden;margin:14px 0 6px}
+.pf-stack div{height:100%}
+.pf-note{font-size:.68rem;color:var(--g400);font-style:italic;line-height:1.5;margin-top:10px}
+.pf-disc{font-size:.74rem;font-weight:800;color:var(--g800);line-height:1.55;margin:4px 2px 0}
+.pf-sub-hd{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--ruby);margin:18px 0 8px}
+.pf-sub-hd:first-child{margin-top:0}
+.pf-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.pf-empty{padding:18px;text-align:center;color:var(--g400);font-size:.8rem;background:var(--g50);border-radius:var(--r-sm)}
+.cf-table{min-width:880px}
+.cf-table td,.cf-table th{padding:7px 8px}
+.cf-bars{display:flex;align-items:flex-end;gap:6px;height:150px;padding:18px 4px 0;border-bottom:1px solid var(--g200)}
+.cf-bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;min-width:0}
+.cf-bar .v{font-size:.58rem;color:var(--g600);margin-bottom:3px;white-space:nowrap}
+.cf-bar .b{width:70%;max-width:38px;background:var(--ruby);border-radius:3px 3px 0 0}
+.cf-lbls{display:flex;gap:6px;padding:5px 4px 0}
+.cf-lbls span{flex:1;text-align:center;font-size:.62rem;color:var(--g600)}
+.tn-row{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:center;margin:8px 0;font-size:.74rem}
+.tn-row .l{text-align:right;color:var(--g600)}
+.tn-row .t{display:flex;align-items:center;gap:8px;min-width:0}
+.tn-row .b{height:22px;background:var(--ruby);border-radius:3px;min-width:2px}
+.tn-row .v{font-size:.68rem;color:var(--g600);white-space:nowrap}
+@media(max-width:560px){.tn-row{grid-template-columns:96px 1fr}.cf-bar .v{font-size:.5rem}
+  table.pf-table.fit{min-width:0}.pf-table.fit td:first-child{min-width:0}.pf-table.fit th,.pf-table.fit td{padding:8px 7px}.pf-table.fit th{white-space:normal}
+  .pf-table.fit tr.sub td:first-child{padding-left:12px;white-space:normal}}
+
 /* ── FOOTER ── */
 footer{text-align:center;padding:18px;color:var(--g400);font-size:.69rem;border-top:1px solid var(--g200);background:var(--white);margin-top:40px}
 
@@ -335,6 +390,21 @@ footer{text-align:center;padding:18px;color:var(--g400);font-size:.69rem;border-
   .pdf-contact-name{font-size:11pt;font-weight:800;color:#2c2a27}
   .pdf-contact-row{font-size:9pt;color:#444;margin-top:2pt}
   .pdf-contact-row strong{color:#9B1B2A}
+  .pdf-pf{width:100%;border-collapse:collapse;font-size:7.5pt;margin:4pt 0 8pt}
+  .pdf-pf th{background:#9B1B2A;color:#fff;padding:4pt 5pt;font-size:6.5pt;text-transform:uppercase;text-align:right}
+  .pdf-pf th:first-child,.pdf-pf td:first-child{text-align:left;width:auto;color:#1a1a1a;font-size:7.5pt}
+  .pdf-pf td:first-child{white-space:nowrap}
+  .pdf-pf.funds td:first-child{white-space:normal;min-width:150pt}
+  .pdf-keep{page-break-inside:avoid}
+  #pdfReport{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .pdf-pf td{padding:3pt 5pt;border-bottom:.3pt solid #eee;text-align:right;white-space:nowrap}
+  .pdf-pf tr.grp td{font-weight:700;background:#f4f3f1}
+  .pdf-pf tr.sub td:first-child{padding-left:14pt}
+  .pdf-pf tr.tot td{font-weight:700;background:#fdf8ed;border-top:1pt solid #C9A84C}
+  .pdf-pf.cf{font-size:6.5pt}.pdf-pf.cf th,.pdf-pf.cf td{padding:3pt 3pt}
+  .pdf-sub{font-size:7.5pt;font-weight:700;color:#9B1B2A;text-transform:uppercase;letter-spacing:.05em;margin:8pt 0 3pt}
+  .pdf-note{font-size:6.5pt;color:#888;font-style:italic}
+  .pdf-break{page-break-before:always}
   @page{margin:.45in;size:A4 portrait}
 }
 
@@ -416,7 +486,7 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
 .wiz-count{font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--ruby)}
 .wiz-title{font-size:.8rem;font-weight:700;color:var(--g800);text-align:right}
 .wiz-bar{height:4px;background:var(--g50);border-radius:4px;overflow:hidden;margin-bottom:10px}
-.wiz-bar-fill{height:100%;width:14.3%;background:linear-gradient(90deg,var(--ruby),var(--gold));transition:width .25s}
+.wiz-bar-fill{height:100%;width:16.7%;background:linear-gradient(90deg,var(--ruby),var(--gold));transition:width .25s}
 .wiz-dots{display:flex;justify-content:space-between;gap:4px}
 .wiz-dot{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--g200);background:#fff;color:var(--g600);font-family:var(--font);font-size:.72rem;font-weight:700;cursor:pointer;transition:all .15s}
 .wiz-dot:hover{border-color:var(--ruby);color:var(--ruby)}
@@ -487,7 +557,7 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
   <!-- Step-by-step input wizard -->
   <div class="card wiz-card">
     <div class="wiz-top">
-      <span class="wiz-count" id="wizCount">Step 1 of 7</span>
+      <span class="wiz-count" id="wizCount">Step 1 of 6</span>
       <span class="wiz-title" id="wizTitle">Personal Details</span>
     </div>
     <div class="wiz-bar"><div class="wiz-bar-fill" id="wizBar"></div></div>
@@ -498,7 +568,6 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
       <button type="button" class="wiz-dot" data-step="3" title="Financial Assets" aria-label="Step 4: Financial Assets" onclick="wizGo(3)">4</button>
       <button type="button" class="wiz-dot" data-step="4" title="Obligations" aria-label="Step 5: Obligations" onclick="wizGo(4)">5</button>
       <button type="button" class="wiz-dot" data-step="5" title="Monthly Cash Flow" aria-label="Step 6: Monthly Cash Flow" onclick="wizGo(5)">6</button>
-      <button type="button" class="wiz-dot" data-step="6" title="Assumptions during retirement" aria-label="Step 7: Assumptions during retirement" onclick="wizGo(6)">7</button>
     </div>
   </div>
 
@@ -570,12 +639,7 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
       <div class="field">
         <label class="lbl">Current Amount in Deposits / Cash</label>
         <div class="fi"><span class="pre">₱</span><input type="text" id="depositsCash" class="pl num-input" placeholder="0" inputmode="numeric"></div>
-        <div class="hint">e.g. savings, checking and time deposits, cash on hand — forms your retirement capital</div>
-      </div>
-      <div class="field">
-        <label class="lbl">Estimated Return p.a. of Deposits / Cash</label>
-        <div class="fi"><input type="number" id="depositRate" class="pr" value="0.05" placeholder="0" min="0" max="30" step="0.01"><span class="suf">%</span></div>
-        <div class="hint">Default 0.05% p.a. — the deposits / cash part of your retirement capital earns this rate</div>
+        <div class="hint">e.g. savings, checking and time deposits, cash on hand — forms your retirement capital (assumed to earn 0.05% p.a.)</div>
       </div>
       <div class="field">
         <label class="lbl">Current Investments</label>
@@ -618,19 +682,10 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
         <div class="fi"><span class="pre">₱</span><input type="text" id="monthlyIncome" class="pl num-input" placeholder="0" inputmode="numeric"></div>
         <div class="hint">e.g. SSS/GSIS, rental income</div>
       </div>
-    </div>
-  </div>
-
-  <div class="card wiz-step" data-step="6">
-    <div class="card-hd"><div class="card-hd-icon">⚙️</div><div><h3>Assumptions during retirement</h3></div></div>
-    <div class="card-bd">
       <div class="field">
         <label class="lbl">Expected years in retirement</label>
         <div class="fi"><input type="number" id="retirementPeriod" class="pr" value="20" min="1" max="50"><span class="suf" style="font-size:.62rem">yrs</span></div>
-      </div>
-      <div class="field">
-        <label class="lbl">Annual Inflation<sup>4</sup></label>
-        <div class="fi"><input type="number" id="inflation" class="pr" value="3.75" min="0" max="20" step="0.05"><span class="suf">%</span></div>
+        <div class="hint">Projections assume annual inflation of 3.75%<sup>4</sup></div>
       </div>
     </div>
   </div>
@@ -649,7 +704,7 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
   <!-- Empty state -->
   <div id="emptyState" class="empty-state" style="margin-top:28px">
     <div class="empty-icon">📋</div>
-    <p>Complete the 7 steps, then click <b>Calculate Results</b> to see your personalized wealth planning analysis.</p>
+    <p>Complete the 6 steps, then click <b>Calculate Results</b> to see your personalized wealth planning analysis.</p>
   </div>
 
   <!-- Edit inputs bar (results mode) -->
@@ -670,6 +725,10 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
       <button class="rtab-btn" onclick="switchRTab(1,this)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
         Estate Planning
+      </button>
+      <button class="rtab-btn" onclick="switchRTab(2,this)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+        Sample Portfolio
       </button>
     </div>
 
@@ -918,6 +977,50 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
 
     </div><!-- /rtab1 estate -->
 
+    <!-- ══ SAMPLE PORTFOLIO TAB ══ -->
+    <div class="rtab-panel" id="rtab2">
+
+      <div class="verdict pf">
+        <div class="verdict-lbl">📈 Sample Portfolio · 65Y Model</div>
+        <div class="verdict-hdg">Capital-preservation model for a 65-year-old moderately conservative investor, with 80% in fixed income.</div>
+        <div class="verdict-sub">Enter a sample amount to see how it would be allocated across asset classes, investment funds, and an alternative bond ladder.</div>
+      </div>
+
+      <!-- Amount -->
+      <div class="sc">
+        <div class="sc-hd"><h2>Sample Amount for Investment</h2><p>All figures below scale with this amount</p></div>
+        <div class="pf-amt">
+          <div class="field">
+            <label class="lbl">Sample Amount for Investment (PHP)</label>
+            <div class="fi"><span class="pre">₱</span><input type="text" id="pfAmount" class="pl num-input" placeholder="Enter amount" inputmode="numeric"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Allocation by asset class -->
+      <div class="sc">
+        <div class="sc-hd"><h2>Strategic Allocation by Asset Class</h2><p>Age 65 · Moderately Conservative</p></div>
+        <div class="pf-wrap"><table class="pf-table fit"><thead><tr><th>Asset Class</th><th>Strategic Allocation</th><th>Sample Amount</th></tr></thead><tbody id="pfClassBody"></tbody></table></div>
+        <div class="pf-stack" id="pfStack"></div>
+        <div class="chart-legend" id="pfStackLegend"></div>
+      </div>
+
+      <!-- Sample Portfolio 1 -->
+      <div class="sc">
+        <div class="sc-hd"><h2>Sample Portfolio 1 — Investment Funds</h2><p>How the model is implemented with BPI Wealth funds</p></div>
+        <div class="pf-wrap"><table class="pf-table"><thead><tr><th>Investment Fund</th><th>Asset Class</th><th>Allocation</th><th>Sample Amount</th></tr></thead><tbody id="pfFundBody"></tbody></table></div>
+      </div>
+
+      <!-- Bond ladder alternative -->
+      <div class="sc">
+        <div class="sc-hd"><h2>Alternative for Domestic Fixed Income — Bond Ladder</h2><p>In place of the 75% ALFM Peso Bond Fund allocation</p></div>
+        <div id="pfLadder"></div>
+      </div>
+
+      <p class="pf-disc">Indicative and for illustration purposes only. Actual returns may vary. Based on indicative prices as of November 5, 2026, at a management fee of 0.35% p.a., net of taxes.</p>
+
+    </div><!-- /rtab2 sample portfolio -->
+
   </div><!-- /resultsArea -->
 </div><!-- /col-right -->
 </div><!-- /two-col -->
@@ -929,7 +1032,7 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
       <p style="margin:0 0 8px"><strong style="color:var(--g800)"><sup>1</sup> “Legally Married”</strong> refers to your current marital status as of today. You are considered legally married if you are in a valid marriage that has not been annulled or declared void by a competent court, or dissolved by the death of your spouse. If you are only legally separated from your spouse, you remain legally married.</p>
       <p style="margin:0 0 8px"><strong style="color:var(--g800)"><sup>2</sup> “Family Home”</strong> refers to the house and/or land on which it stands where the family actually and permanently resides. It is the principal residence of the family, to which they return after temporary absences, such as travel, overseas work, or study.</p>
       <p style="margin:0 0 8px"><strong style="color:var(--g800)"><sup>3</sup> Estimated Net Return p.a. of Current Investments</strong> is a free field and is also used as the return of the retirement fund. The 10-year average yield of the 10-year Philippine Government Security is 4.25% p.a.</p>
-      <p style="margin:0"><strong style="color:var(--g800)"><sup>4</sup> Annual Inflation</strong> — the average 20-year Philippine inflation rate is 3.75% p.a.</p>
+      <p style="margin:0"><strong style="color:var(--g800)"><sup>4</sup> Annual Inflation</strong> — projections assume 3.75% p.a., the average 20-year Philippine inflation rate. Deposits / cash are assumed to earn 0.05% p.a.</p>
     </div>
     <div style="font-size:.66rem;color:var(--g600);line-height:1.6">
       <div style="font-size:.74rem;font-weight:800;color:var(--g800);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Disclaimer</div>
@@ -1009,6 +1112,10 @@ function handleCurrencyInput(el){
   if(el.value!==formatted){el.value=formatted;const diff=formatted.length-oldLen;el.setSelectionRange(pos+diff,pos+diff);}
 }
 
+/* ── FIXED ASSUMPTIONS (no longer user inputs) ── */
+const DEPOSIT_RATE_PCT = 0.05;   // return p.a. of deposits / cash
+const INFLATION_PCT    = 3.75;   // annual inflation (20-yr PH average)
+
 /* ── GROWING ANNUITY PV (annuity-immediate) ── */
 function pvGA(pmt,g,r,n){
   if(n<=0||r<=-1)return 0;
@@ -1021,7 +1128,7 @@ function computeRetirement(rOverride){
   const monthlyIncome  = gv('monthlyIncome');
   const monthlyExpense = gv('monthlyExpense');
   const cashAvail      = gv('depositsCash');          // Current Amount in Deposits / Cash
-  const depositRate    = gv('depositRate')/100;       // return on deposits/cash (default 0.05%)
+  const depositRate    = DEPOSIT_RATE_PCT/100;        // return on deposits/cash (fixed 0.05%)
   const currentInvest  = gv('currentInvestment');
   const returnPA       = gv('returnPA')/100;
   const liabilities    = gv('liabilities');
@@ -1029,7 +1136,7 @@ function computeRetirement(rOverride){
   const period         = Math.max(1,Math.round(gv('retirementPeriod')||20));
   const startAge       = Math.max(0,Math.round(gv('age')||0));
   const r              = (rOverride!=null?rOverride:gv('returnPA'))/100; // retirement fund return = current investments return
-  const inf            = gv('inflation')/100;
+  const inf            = INFLATION_PCT/100;           // fixed 3.75%
 
   const annualIncome     = monthlyIncome*12;
   const annualExpense    = monthlyExpense*12;
@@ -1286,8 +1393,8 @@ function computeEstate(){
 let lastR=null,lastE=null;
 
 function doRender(){
-  const requiredFields=['monthlyExpense','returnPA','retirementPeriod','inflation'];
-  const fieldLabels={monthlyExpense:'Monthly Expense',returnPA:'Net Return p.a. of Current Investments',retirementPeriod:'Retirement Period',inflation:'Annual Inflation'};
+  const requiredFields=['monthlyExpense','returnPA','retirementPeriod'];
+  const fieldLabels={monthlyExpense:'Monthly Expense',returnPA:'Net Return p.a. of Current Investments',retirementPeriod:'Expected years in retirement'};
   const missingCritical=requiredFields.filter(id=>!hasVal(id)||(id!=='returnPA'&&gv(id)===0));
   const ageV=gv('age');
   const ageOk=hasVal('age')&&ageV>=50&&ageV<=100;
@@ -1347,7 +1454,7 @@ function setMode(m){
 }
 function editInputs(){ setMode('input'); wizGo(0); }
 // Step that holds each required field, so a missing field jumps the user there
-const FIELD_STEP={age:0,monthlyExpense:5,depositsCash:3,currentInvestment:3,returnPA:3,retirementPeriod:6,inflation:6};
+const FIELD_STEP={age:0,monthlyExpense:5,depositsCash:3,currentInvestment:3,returnPA:3,retirementPeriod:5};
 function calculate(){
   const btns=document.querySelectorAll('.calc-btn,#wizNext');
   btns.forEach(b=>b.classList.add('loading'));
@@ -1363,7 +1470,7 @@ function calculate(){
       ra.classList.remove('reveal');void ra.offsetWidth;ra.classList.add('reveal');
     } else {
       // jump to the first step with a missing required field
-      const firstMissing=['age','monthlyExpense','depositsCash','returnPA','retirementPeriod','inflation'].sort((a,b)=>FIELD_STEP[a]-FIELD_STEP[b]).find(id=>{
+      const firstMissing=['age','monthlyExpense','depositsCash','returnPA','retirementPeriod'].sort((a,b)=>FIELD_STEP[a]-FIELD_STEP[b]).find(id=>{
         if(id==='age'){const a=gv('age');return !(hasVal('age')&&a>=50&&a<=100);}
         if(id==='depositsCash')return !(hasVal('depositsCash')||hasVal('currentInvestment'));
         if(id==='returnPA')return !hasVal('returnPA');
@@ -1763,17 +1870,16 @@ function resetForm(){
   ['monthlyIncome','monthlyExpense','depositsCash','currentInvestment','returnPA',
    'familyHomeValue','familyHomeOtherOwners','otherRealEstate','liabilities','specialAllotment'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
   document.getElementById('age').value='60';
-  document.getElementById('depositRate').value='0.05';
   const lm=document.getElementById('legallyMarried');if(lm)lm.value='';
   document.getElementById('retirementPeriod').value='20';
   document.getElementById('returnPA').value='4.25';
-  document.getElementById('inflation').value='3.75';
   document.getElementById('legitChildren').value='0';
   document.getElementById('illegitChildren').value='0';
   document.getElementById('survivingSpouse').value='Yes';
   document.getElementById('legitParents').value='No';
   document.getElementById('illegitParents').value='No';
   if(typeof syncSpouseLock==='function')syncSpouseLock();
+  {const pa=document.getElementById('pfAmount');if(pa)pa.value='';if(typeof renderPortfolio==='function')renderPortfolio();}
   document.getElementById('emptyState').style.display='';
   document.getElementById('resultsArea').style.display='none';
   calcDone=false;calcDirty=false;
@@ -1788,6 +1894,44 @@ function downloadPDF(){
   const c=lastR,e=lastE;
   const now=new Date().toLocaleDateString('en-PH',{year:'numeric',month:'long',day:'numeric'});
   const pct=n=>e.netAfterTax>0?fPct(n/e.netAfterTax):'—';
+  const p=computePortfolio();
+  const pHas=p.amt>0, pA=v=>pHas?fP(v):'—';
+  const pfSection=`
+    <div class="pdf-sec pdf-break">
+      <div class="pdf-sec-title">Sample Portfolio — 65Y Model (Moderately Conservative)</div>
+      <p class="pdf-note" style="font-style:normal;color:#555;margin-bottom:6pt">Capital-preservation model for a 65-year-old moderately conservative investor, with 80% in fixed income.${pHas?` Sample amount for investment: <b>${fP(p.amt)}</b>.`:' No sample amount was entered.'}</p>
+      <div class="pdf-sub">Strategic Allocation by Asset Class</div>
+      <table class="pdf-pf"><thead><tr><th>Asset Class</th><th>Strategic Allocation</th><th>Sample Amount</th></tr></thead><tbody>
+        ${p.classes.map(c=>`<tr class="${c.grp?'grp':'sub'}"><td>${c.name}</td><td>${pctF(c.pct,0)}</td><td>${pA(c.amount)}</td></tr>`).join('')}
+        <tr class="tot"><td>TOTAL</td><td>100%</td><td>${pA(p.amt)}</td></tr>
+        <tr><td>Expected Return</td><td>${pctF(PF_MODEL.expReturn)}</td><td>${pHas?fP(p.expIncome)+' / yr':'—'}</td></tr>
+        <tr><td>Expected Risk</td><td>${pctF(PF_MODEL.expRisk)}</td><td></td></tr>
+      </tbody></table>
+      <div class="pdf-sub">Sample Portfolio 1 — Investment Funds</div>
+      <table class="pdf-pf funds"><thead><tr><th>Investment Fund</th><th>Asset Class</th><th>Allocation</th><th>Sample Amount</th></tr></thead><tbody>
+        ${p.funds.map(f=>`<tr><td>${f.name}</td><td>${f.cls}</td><td>${pctF(f.pct,0)}</td><td>${pA(f.amount)}</td></tr>`).join('')}
+        <tr class="tot"><td>TOTAL</td><td></td><td>100%</td><td>${pA(p.amt)}</td></tr>
+      </tbody></table>
+      ${pHas?`
+      <div class="pdf-sub">Alternative for Domestic Fixed Income (75%) — Bond Ladder</div>
+      <table class="pdf-pf"><thead><tr><th>Investment Outlet</th><th>Maturity</th><th>Face Amount</th><th>Indicative Cash Out</th><th>Price</th><th>Gross YTM</th><th>Est. Net Return p.a.</th></tr></thead><tbody>
+        ${p.bonds.map(b=>`<tr><td>${b.code}</td><td>${fmtDate(b.mat)}</td><td>${fP2(b.face)}</td><td>${fP2(b.cashOut)}</td><td>${b.price.toFixed(2)}</td><td>${b.ytm.toFixed(2)}%</td><td>${b.net.toFixed(2)}%</td></tr>`).join('')}
+        <tr class="tot"><td>TOTAL / Weighted average</td><td></td><td>${fP2(p.totFace)}</td><td>${fP2(p.totCash)}</td><td></td><td>${p.wYtm.toFixed(2)}%</td><td>${p.wNet.toFixed(2)}%</td></tr>
+      </tbody></table>
+      <div class="pdf-sub">Indicative Cash Flow — Per Month (net of withholding tax and fees)</div>
+      <table class="pdf-pf cf"><thead><tr><th>Outlet</th><th>Coupon · Freq</th>${PF_MONTHS.map(m=>`<th>${m}</th>`).join('')}</tr></thead><tbody>
+        ${p.bonds.map(b=>`<tr><td>${b.code}</td><td>${b.cpn.toFixed(2)}% · ${PF_FREQ[b.freq]}</td>${b.cf.map(v=>`<td>${v?fmt(v):''}</td>`).join('')}</tr>`).join('')}
+        <tr class="tot"><td>TOTAL</td><td></td>${p.monthly.map(v=>`<td>${fmt(v)}</td>`).join('')}</tr>
+      </tbody></table>
+      <p class="pdf-note">Annual net coupon income: ${fP(p.annualCoupon)} (about ${fP(p.annualCoupon/12)} per month on average).</p>
+      <div class="pdf-keep"><div class="pdf-sub">Tenor Bucket</div>
+      <table class="pdf-pf"><thead><tr><th>Remaining Term</th><th>Total in PHP</th><th>% Allocation</th></tr></thead><tbody>
+        ${p.buckets.map(b=>`<tr><td>${b.label}</td><td>${fmt(b.amount)}</td><td>${pctF(b.pct)}</td></tr>`).join('')}
+        <tr class="tot"><td>TOTAL</td><td>${fmt(p.totFace)}</td><td>100%</td></tr>
+      </tbody></table></div>
+      <p class="pdf-note">Indicative computation only. Prices, gross YTM and estimated net returns are indicative and subject to market conditions at the time of purchase; indicative cash out includes accrued interest. Coupon timing follows each security's schedule from the next coupon date after settlement. Totals may differ by ₱1 due to rounding.</p>`:''}
+      <p style="font-size:7.5pt;font-weight:700;color:#1a1a1a;margin-top:6pt">Indicative and for illustration purposes only. Actual returns may vary. Based on indicative prices as of November 5, 2026, at a management fee of 0.35% p.a., net of taxes.</p>
+    </div>`;
 
   let verdictTitle,verdictClass;
   if(c.insufficientCapital){verdictTitle='⚠ Initial Investible Amount Is Not Enough';verdictClass='';}
@@ -1816,12 +1960,12 @@ function downloadPDF(){
           <div class="pdf-row"><span class="pdf-row-lbl">Age</span><span class="pdf-row-val">${c.startAge}</span></div>
           <div class="pdf-row"><span class="pdf-row-lbl">Other Sources of Income</span><span class="pdf-row-val">${fP(c.monthlyIncome)}</span></div>
           <div class="pdf-row"><span class="pdf-row-lbl">Estimated Monthly Expense</span><span class="pdf-row-val">${fP(c.monthlyExpense)}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Retirement Period</span><span class="pdf-row-val">${c.period} years</span></div>
-                    <div class="pdf-row"><span class="pdf-row-lbl">Annual Inflation</span><span class="pdf-row-val">${(c.inf*100).toFixed(2)}%</span></div>
+          <div class="pdf-row"><span class="pdf-row-lbl">Expected Years in Retirement</span><span class="pdf-row-val">${c.period} years</span></div>
+                    <div class="pdf-row"><span class="pdf-row-lbl">Annual Inflation (fixed)</span><span class="pdf-row-val">${(c.inf*100).toFixed(2)}%</span></div>
         </div>
         <div>
           <div class="pdf-row"><span class="pdf-row-lbl">Current Amount in Deposits / Cash</span><span class="pdf-row-val">${fP(c.cashAvail)}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Return p.a. of Deposits / Cash</span><span class="pdf-row-val">${(c.depositRate*100).toFixed(2)}%</span></div>
+          <div class="pdf-row"><span class="pdf-row-lbl">Return p.a. of Deposits / Cash (fixed)</span><span class="pdf-row-val">${(c.depositRate*100).toFixed(2)}%</span></div>
           <div class="pdf-row"><span class="pdf-row-lbl">Current Investments</span><span class="pdf-row-val">${fP(c.currentInvest)}</span></div>
           <div class="pdf-row"><span class="pdf-row-lbl">Return p.a. of Current Investments</span><span class="pdf-row-val">${(c.returnPA*100).toFixed(2)}%</span></div>
           <div class="pdf-row"><span class="pdf-row-lbl">Family Home (Estimated Value)</span><span class="pdf-row-val">${fP(e.familyHomeValue)}</span></div>
@@ -1832,6 +1976,9 @@ function downloadPDF(){
           <div class="pdf-row"><span class="pdf-row-lbl">Legitimate Children</span><span class="pdf-row-val">${e.legitChildrenN}</span></div>
           <div class="pdf-row"><span class="pdf-row-lbl">Surviving Spouse</span><span class="pdf-row-val">${e.survivingSpouse}</span></div>
           <div class="pdf-row"><span class="pdf-row-lbl">Illegitimate Children</span><span class="pdf-row-val">${e.illegitChildrenN}</span></div>
+          <div class="pdf-row"><span class="pdf-row-lbl">Legitimate Parents Surviving</span><span class="pdf-row-val">${e.legitParents}</span></div>
+          <div class="pdf-row"><span class="pdf-row-lbl">Illegitimate Parents Surviving</span><span class="pdf-row-val">${e.illegitParents}</span></div>
+          <div class="pdf-row"><span class="pdf-row-lbl">Family Home — Other Names on Title</span><span class="pdf-row-val">${e.familyHomeOtherOwners}</span></div>
         </div>
       </div>
     </div>
@@ -1912,6 +2059,8 @@ function downloadPDF(){
       </table>
     </div>
 
+    ${pfSection}
+
     <div class="pdf-contact">
       <div class="pdf-contact-hd">Your BPI Personal Wealth Advisor</div>
       <div class="pdf-contact-name">Neena Tengco</div>
@@ -1931,8 +2080,150 @@ function downloadPDF(){
 }
 
 
+/* ══════════════════════════════════════════════════════════════
+ * SAMPLE PORTFOLIO — 65Y Model (Moderately Conservative)
+ * Everything scales from the user-entered sample amount (pfAmount).
+ * Bond ladder = alternative for the 75% domestic fixed income sleeve,
+ * split 2 : 2 : 2 : 1.5 across 1064 / R518 / 7-69 / R201.
+ * Prices, YTMs and net returns are indicative reference figures.
+ * Indicative cash out per ₱1 face (price + accrued interest) is taken
+ * from the reference breakdown and scaled linearly with face amount.
+ * ══════════════════════════════════════════════════════════════ */
+const PF_MODEL={age:65,profile:'Moderately Conservative',expReturn:0.045,expRisk:0.037};
+const PF_CLASSES=[
+  {name:'Fixed Income',pct:0.80,grp:true},
+  {name:'Domestic Fixed Income',pct:0.75,color:'#9B1B2A'},
+  {name:'International Fixed Income',pct:0.05,color:'#e8a3ad'},
+  {name:'Equities',pct:0.20,grp:true},
+  {name:'Domestic Equities',pct:0.05,color:'#4a4845'},
+  {name:'International Equities',pct:0.15,color:'#c8bf9a'},
+];
+const PF_FUNDS=[
+  {name:'ALFM Peso Bond Fund or Gov’t/Corp bond 1-3Y and longer',cls:'Domestic Fixed Income',pct:0.75,color:'#9B1B2A'},
+  {name:'Global Bond Income Fund (PHP)',cls:'International Fixed Income',pct:0.05,color:'#e8a3ad'},
+  {name:'BPI Phil High Dividend Equity Fund',cls:'Domestic Equities',pct:0.05,color:'#4a4845'},
+  {name:'BPI Global Equity Fund of Fund (PHP)',cls:'International Equities',pct:0.15,color:'#c8bf9a'},
+];
+const PF_LADDER_SHARE=0.75; // domestic fixed income sleeve
+const PF_LADDER=[
+  {code:'1064',mat:'2029-01-10',w:2/7.5,  price:99.47,cashPerFace:2025721.97/2000000,ytm:7.20,net:5.31,cpn:5.15,freq:2,months:[0,6]},
+  {code:'R518',mat:'2029-02-28',w:2/7.5,  price:98.20,cashPerFace:1983099.63/2000000,ytm:7.30,net:5.48,cpn:4.65,freq:4,months:[1,4,7,10]},
+  {code:'7-69',mat:'2030-04-27',w:2/7.5,  price:95.57,cashPerFace:1914605.79/2000000,ytm:7.80,net:5.97,cpn:4.45,freq:2,months:[3,9]},
+  {code:'R201',mat:'2032-03-01',w:1.5/7.5,price:92.91,cashPerFace:1406959.61/1500000,ytm:7.85,net:6.05,cpn:4.35,freq:4,months:[2,5,8,11]},
+];
+const PF_MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const PF_FREQ={2:'semi-annual',4:'quarterly',12:'monthly',1:'annual'};
+const fmtDate=iso=>new Date(iso+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'2-digit',year:'numeric'});
+
+function computePortfolio(){
+  const amt=gv('pfAmount');
+  const classes=PF_CLASSES.map(c=>({...c,amount:amt*c.pct}));
+  const funds=PF_FUNDS.map(f=>({...f,amount:amt*f.pct}));
+  const ladderTotal=amt*PF_LADDER_SHARE;
+  const today=new Date();today.setHours(0,0,0,0);
+  const bonds=PF_LADDER.map(b=>{
+    const face=ladderTotal*b.w;
+    const cashOut=face*b.cashPerFace;
+    const perCoupon=face*b.cpn/100/b.freq;
+    const cf=PF_MONTHS.map((_,m)=>b.months.includes(m)?perCoupon:0);
+    const yrs=(new Date(b.mat+'T00:00:00')-today)/(365.25*864e5);
+    return {...b,face,cashOut,perCoupon,cf,annual:perCoupon*b.freq,yrs};
+  });
+  const totFace=bonds.reduce((a,b)=>a+b.face,0);
+  const totCash=bonds.reduce((a,b)=>a+b.cashOut,0);
+  const wYtm=totCash>0?bonds.reduce((a,b)=>a+b.cashOut*b.ytm,0)/totCash:0;
+  const wNet=totCash>0?bonds.reduce((a,b)=>a+b.cashOut*b.net,0)/totCash:0;
+  const monthly=PF_MONTHS.map((_,m)=>bonds.reduce((a,b)=>a+b.cf[m],0));
+  const annualCoupon=monthly.reduce((a,v)=>a+v,0);
+  const buckets=[
+    {label:'Less than 1 Year',test:y=>y<1},
+    {label:'Between 1 and 3 Years',test:y=>y>=1&&y<3},
+    {label:'Between 3 and 5 Years',test:y=>y>=3&&y<5},
+    {label:'Above 5 Years',test:y=>y>=5},
+  ].map(k=>{const v=bonds.filter(b=>k.test(b.yrs)).reduce((a,b)=>a+b.face,0);return {label:k.label,amount:v,pct:totFace>0?v/totFace:0};});
+  return {amt,classes,funds,ladderTotal,bonds,totFace,totCash,wYtm,wNet,monthly,annualCoupon,buckets,
+          expIncome:amt*PF_MODEL.expReturn};
+}
+
+const fP2=n=>fP(n,2);
+const pctF=(n,d=1)=>(n*100).toFixed(d)+'%';
+
+function renderPortfolio(){
+  const p=computePortfolio();
+  const has=p.amt>0;
+  const A=v=>has?fP(v):'—';
+  lastP=p;
+
+  // Asset classes
+  document.getElementById('pfClassBody').innerHTML=
+    p.classes.map(c=>`<tr class="${c.grp?'grp':'sub'}"><td>${c.grp?'':`<span class="pf-dot" style="background:${c.color}"></span>`}${c.name}</td><td>${pctF(c.pct,0)}</td><td>${A(c.amount)}</td></tr>`).join('')+
+    `<tr class="tot"><td>TOTAL</td><td>100%</td><td>${A(p.amt)}</td></tr>`+
+    `<tr class="meta"><td>Expected Return</td><td>${pctF(PF_MODEL.expReturn)}</td><td>${has?fP(p.expIncome)+' / yr':'—'}</td></tr>`+
+    `<tr class="meta"><td>Expected Risk</td><td>${pctF(PF_MODEL.expRisk)}</td><td></td></tr>`;
+  const leaf=p.classes.filter(c=>!c.grp);
+  document.getElementById('pfStack').innerHTML=leaf.map(c=>`<div style="width:${c.pct*100}%;background:${c.color}" title="${c.name} ${pctF(c.pct,0)}"></div>`).join('');
+  document.getElementById('pfStackLegend').innerHTML=leaf.map(c=>`<div class="cl-item"><div class="cl-dot" style="background:${c.color}"></div>${c.name} · ${pctF(c.pct,0)}</div>`).join('');
+
+  // Funds
+  document.getElementById('pfFundBody').innerHTML=
+    p.funds.map(f=>`<tr><td><span class="pf-dot" style="background:${f.color}"></span>${f.name}</td><td>${f.cls}</td><td>${pctF(f.pct,0)}</td><td>${A(f.amount)}</td></tr>`).join('')+
+    `<tr class="tot"><td>TOTAL</td><td></td><td>100%</td><td>${A(p.amt)}</td></tr>`;
+
+  // Ladder
+  const L=document.getElementById('pfLadder');
+  if(!has){L.innerHTML='<div class="pf-empty">Enter a sample amount above to see the bond ladder, monthly coupon cash flow, and tenor buckets.</div>';return;}
+  const maxM=Math.max(...p.monthly,1);
+  const maxB=Math.max(...p.buckets.map(b=>b.amount),1);
+  L.innerHTML=`
+    <p class="sc-desc" style="margin-bottom:12px">The 75% domestic fixed income sleeve (<b>${fP(p.ladderTotal)}</b>) is placed in four government / corporate bonds with staggered maturities. The other 25% stays in the funds shown in Sample Portfolio 1.</p>
+    <div class="pf-kpis">
+      <div class="rc gold"><div class="rc-label">Total Face Amount</div><div class="rc-val" style="font-size:1.15rem">${fP(p.totFace)}</div></div>
+      <div class="rc muted"><div class="rc-label">Indicative Cash Out</div><div class="rc-val" style="font-size:1.15rem">${fP(p.totCash)}</div></div>
+      <div class="rc green"><div class="rc-label">Est. Net Return p.a.</div><div class="rc-val" style="font-size:1.15rem">${p.wNet.toFixed(2)}%</div><div class="rc-sub">weighted average</div></div>
+      <div class="rc ruby"><div class="rc-label">Annual Net Coupon Income</div><div class="rc-val" style="font-size:1.15rem">${fP(p.annualCoupon)}</div><div class="rc-sub">about ${fP(p.annualCoupon/12)} / month on average</div></div>
+    </div>
+
+    <div class="pf-sub-hd">Investment Breakdown</div>
+    <div class="pf-wrap"><table class="pf-table" style="min-width:760px"><thead><tr><th>Investment Outlet</th><th>Maturity</th><th>Face Amount</th><th>Indicative Cash Out</th><th>Price</th><th>Gross YTM</th><th>Est. Net Return p.a.</th></tr></thead><tbody>
+      ${p.bonds.map(b=>`<tr><td><b>${b.code}</b></td><td>${fmtDate(b.mat)}</td><td>${fP2(b.face)}</td><td>${fP2(b.cashOut)}</td><td>${b.price.toFixed(2)}</td><td>${b.ytm.toFixed(2)}%</td><td>${b.net.toFixed(2)}%</td></tr>`).join('')}
+      <tr class="tot"><td>TOTAL / Weighted average</td><td></td><td>${fP2(p.totFace)}</td><td>${fP2(p.totCash)}</td><td></td><td>${p.wYtm.toFixed(2)}%</td><td>${p.wNet.toFixed(2)}%</td></tr>
+    </tbody></table></div>
+
+    <div class="pf-sub-hd">Indicative Cash Flow — Per Month</div>
+    <div class="pf-wrap"><table class="pf-table cf-table"><thead><tr><th>Outlet</th><th style="text-align:left">Net Coupon · Freq</th>${PF_MONTHS.map(m=>`<th>${m}</th>`).join('')}</tr></thead><tbody>
+      ${p.bonds.map(b=>`<tr><td><b>${b.code}</b></td><td style="text-align:left">${b.cpn.toFixed(2)}% · ${PF_FREQ[b.freq]}</td>${b.cf.map(v=>`<td>${v?fmt(v):''}</td>`).join('')}</tr>`).join('')}
+      <tr class="tot"><td>TOTAL</td><td></td>${p.monthly.map(v=>`<td>${fmt(v)}</td>`).join('')}</tr>
+    </tbody></table></div>
+    <div class="chart-box" style="margin-top:12px">
+      <div class="chart-title">Monthly Cash Flow (PHP)</div>
+      <div class="cf-bars">${p.monthly.map(v=>`<div class="cf-bar"><span class="v">${abbr(v)}</span><div class="b" style="height:${Math.max(2,v/maxM*100)}%"></div></div>`).join('')}</div>
+      <div class="cf-lbls">${PF_MONTHS.map(m=>`<span>${m}</span>`).join('')}</div>
+    </div>
+    <p class="pf-note">Coupon income in PHP, net of withholding tax and fees. Indicative computation only; coupon timing follows each security's schedule from the next coupon date after settlement. Totals may differ by ₱1 due to rounding.</p>
+
+    <div class="pf-sub-hd">Sample Bond Laddering — Tenor Bucket</div>
+    <div class="nest-grid">
+      <div class="pf-wrap"><table class="pf-table fit"><thead><tr><th>Remaining Term</th><th>Total in PHP</th><th>% Allocation</th></tr></thead><tbody>
+        ${p.buckets.map(b=>`<tr><td>${b.label}</td><td>${fmt(b.amount)}</td><td>${pctF(b.pct)}</td></tr>`).join('')}
+        <tr class="tot"><td>TOTAL</td><td>${fmt(p.totFace)}</td><td>100%</td></tr>
+      </tbody></table></div>
+      <div class="chart-box">
+        <div class="chart-title">Allocation by Tenor</div>
+        ${p.buckets.map(b=>`<div class="tn-row"><span class="l">${b.label}</span><span class="t"><span class="b" style="width:${b.amount/maxB*70}%"></span><span class="v">${b.amount?fmt(b.amount)+' · '+pctF(b.pct):'0'}</span></span></div>`).join('')}
+      </div>
+    </div>
+    <p class="pf-note">Remaining term is measured from today to each bond's maturity. Prices, gross YTM and estimated net returns are indicative and subject to market conditions at the time of purchase; indicative cash out includes accrued interest.</p>`;
+}
+let lastP=null;
+(function(){
+  const el=document.getElementById('pfAmount');if(!el)return;
+  el.addEventListener('input',()=>{handleCurrencyInput(el);renderPortfolio();});
+  el.addEventListener('paste',()=>setTimeout(()=>{handleCurrencyInput(el);renderPortfolio();},0));
+})();
+renderPortfolio();
+
 // ── INPUT WIZARD (one section at a time) ──
-let wizIdx=0;const WIZ_N=7;const wizVisited=new Set([0]);
+let wizIdx=0;const WIZ_N=6;const wizVisited=new Set([0]);
 function wizGo(i){
   if(i<0||i>=WIZ_N)return;
   wizIdx=i;wizVisited.add(i);
@@ -1958,7 +2249,7 @@ wizGo(0);
 
 /* ── EVENT WIRING ── */
 const CURRENCY_INPUT_IDS=['monthlyIncome','monthlyExpense','depositsCash','currentInvestment','familyHomeValue','otherRealEstate','liabilities','specialAllotment'];
-const OTHER_INPUT_IDS=['age','depositRate','legallyMarried','returnPA','retirementPeriod','inflation','legitChildren','illegitChildren','survivingSpouse','legitParents','illegitParents'];
+const OTHER_INPUT_IDS=['age','legallyMarried','returnPA','retirementPeriod','legitChildren','illegitChildren','survivingSpouse','legitParents','illegitParents'];
 
 CURRENCY_INPUT_IDS.forEach(id=>{
   const el=document.getElementById(id);if(!el)return;
