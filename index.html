@@ -347,67 +347,6 @@ footer{text-align:center;padding:18px;color:var(--g400);font-size:.69rem;border-
 /* ── ANIMATIONS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── PRINT ── */
-#pdfReport{display:none}
-@media print{
-  body>*:not(#pdfReport){display:none!important}
-  #pdfReport{display:block!important;font-family:Arial,sans-serif;font-size:10.5pt;color:#1a1a1a}
-  .pdf-cover{background:#9B1B2A;color:#fff;padding:36pt 32pt;page-break-after:avoid}
-  .pdf-cover h1{font-size:20pt;font-weight:700;color:#fff;margin-bottom:5pt}
-  .pdf-cover .sub{font-size:8.5pt;color:rgba(255,255,255,.75);margin-top:4pt}
-  .pdf-cover .gold{color:#C9A84C;font-size:8.5pt;font-weight:700;margin-bottom:8pt;display:block;text-transform:uppercase;letter-spacing:.07em}
-  .pdf-sec{padding:14pt 32pt;border-bottom:.5pt solid #eee;page-break-inside:avoid}
-  .pdf-sec-title{font-size:8.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:9pt;padding-bottom:3pt;border-bottom:1.5pt solid #9B1B2A;color:#9B1B2A}
-  .pdf-sec-title.navy{border-bottom-color:#1a2e4a;color:#1a2e4a}
-  .pdf-verdict{padding:10pt 12pt;margin-bottom:10pt;border-radius:3pt;border-left:3pt solid #9B1B2A;background:#fdf4f5}
-  .pdf-verdict.ok{border-left-color:#1a6e42;background:#eef8f3}
-  .pdf-verdict.estate{border-left-color:#1a2e4a;background:#f0f4f9}
-  .pdf-verdict h3{font-size:10pt;font-weight:700;margin-bottom:2pt}
-  .pdf-verdict p{font-size:8pt;color:#555}
-  .pdf-2col{display:grid;grid-template-columns:1fr 1fr;gap:16pt}
-  .pdf-stat{margin-bottom:6pt}
-  .pdf-stat-label{font-size:7pt;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1pt}
-  .pdf-stat-val{font-size:11pt;font-weight:700}
-  .pdf-stat-val.ruby{color:#9B1B2A}
-  .pdf-stat-val.gold{color:#a07c28}
-  .pdf-stat-val.green{color:#1a6e42}
-  .pdf-stat-val.navy{color:#1a2e4a}
-  .pdf-row{display:flex;justify-content:space-between;padding:3pt 0;border-bottom:.5pt solid #f2f2f2}
-  .pdf-row-lbl{font-size:8pt;color:#555}
-  .pdf-row-val{font-size:8.5pt;font-weight:700}
-  .pdf-sc-box{border:.5pt solid #eee;border-radius:3pt;padding:9pt 11pt;margin-bottom:7pt}
-  .pdf-sc-box h3{font-size:9pt;font-weight:700;margin-bottom:3pt}
-  .pdf-sc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7pt;margin-top:5pt}
-  .pdf-ht{width:100%;border-collapse:collapse;font-size:7.5pt;margin-top:7pt}
-  .pdf-ht th{background:#f0f4f9;padding:4pt 6pt;text-align:left;font-weight:700;font-size:6.5pt;text-transform:uppercase;color:#1a2e4a;border-bottom:.5pt solid #b8cde0}
-  .pdf-ht th:last-child,.pdf-ht td:last-child{text-align:right}
-  .pdf-ht td{padding:3.5pt 6pt;border-bottom:.3pt solid #f0f0f0}
-  .pdf-ht .total-row td{font-weight:700;background:#f4f3f1;border-top:1pt solid #ddd}
-  .pdf-ht .free-row td{font-weight:700;color:#a07c28;background:#fdf8ed}
-  .pdf-footer{padding:10pt 32pt;font-size:6.5pt;color:#888;border-top:.5pt solid #ddd}
-  .pdf-contact{margin:0 32pt 8pt;padding:10pt 14pt;background:#fdf4f5;border:1pt solid #f5c6cc;border-left:4pt solid #9B1B2A;border-radius:4pt;page-break-inside:avoid}
-  .pdf-contact-hd{font-size:8pt;font-weight:800;color:#9B1B2A;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3pt}
-  .pdf-contact-name{font-size:11pt;font-weight:800;color:#2c2a27}
-  .pdf-contact-row{font-size:9pt;color:#444;margin-top:2pt}
-  .pdf-contact-row strong{color:#9B1B2A}
-  .pdf-pf{width:100%;border-collapse:collapse;font-size:7.5pt;margin:4pt 0 8pt}
-  .pdf-pf th{background:#9B1B2A;color:#fff;padding:4pt 5pt;font-size:6.5pt;text-transform:uppercase;text-align:right}
-  .pdf-pf th:first-child,.pdf-pf td:first-child{text-align:left;width:auto;color:#1a1a1a;font-size:7.5pt}
-  .pdf-pf td:first-child{white-space:nowrap}
-  .pdf-pf.funds td:first-child{white-space:normal;min-width:150pt}
-  .pdf-keep{page-break-inside:avoid}
-  #pdfReport{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .pdf-pf td{padding:3pt 5pt;border-bottom:.3pt solid #eee;text-align:right;white-space:nowrap}
-  .pdf-pf tr.grp td{font-weight:700;background:#f4f3f1}
-  .pdf-pf tr.sub td:first-child{padding-left:14pt}
-  .pdf-pf tr.tot td{font-weight:700;background:#fdf8ed;border-top:1pt solid #C9A84C}
-  .pdf-pf.cf{font-size:6.5pt}.pdf-pf.cf th,.pdf-pf.cf td{padding:3pt 3pt}
-  .pdf-sub{font-size:7.5pt;font-weight:700;color:#9B1B2A;text-transform:uppercase;letter-spacing:.05em;margin:8pt 0 3pt}
-  .pdf-note{font-size:6.5pt;color:#888;font-style:italic}
-  .pdf-break{page-break-before:always}
-  @page{margin:.45in;size:A4 portrait}
-}
-
 /* ── RESPONSIVE ── */
 @media(max-width:820px){
   .two-col{grid-template-columns:1fr}
@@ -537,10 +476,6 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
       <p>Plan your retirement lifestyle and understand your estate — all in one place.</p>
     </div>
     <div class="hero-actions">
-      <button class="btn btn-gold" onclick="downloadPDF()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
-        Download Results as PDF
-      </button>
       <button class="btn btn-ghost" onclick="resetForm()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/></svg>
         Refresh
@@ -1045,7 +980,6 @@ body.mode-results .two-col{grid-template-columns:minmax(0,1fr)}
   </div>
 </footer>
 
-<div id="pdfReport"></div>
 
 <script>
 "use strict";
@@ -1882,181 +1816,6 @@ function resetForm(){
   wizVisited.clear();setMode('input');wizGo(0);
 }
 
-/* ── PDF ── */
-function downloadPDF(){
-  if(!calcDone||!lastR||!lastE){alert('Please complete the steps and click Calculate Results first.');return;}
-  if(calcDirty){ if(!doRender()){alert('Please complete the required fields and recalculate first.');return;} calcDirty=false;updateWizBtn(); }
-  const c=lastR,e=lastE;
-  const now=new Date().toLocaleDateString('en-PH',{year:'numeric',month:'long',day:'numeric'});
-  const pct=n=>e.netAfterTax>0?fPct(n/e.netAfterTax):'—';
-  const p=computePortfolio();
-  const pHas=p.amt>0, pA=v=>pHas?fP(v):'—';
-  const pfSection=`
-    <div class="pdf-sec pdf-break">
-      <div class="pdf-sec-title">Sample Portfolio — 65Y Model (Moderately Conservative)</div>
-      <p class="pdf-note" style="font-style:normal;color:#555;margin-bottom:6pt">Capital-preservation model for a 65-year-old moderately conservative investor, with 80% in fixed income.${pHas?` Sample amount for investment: <b>${fP(p.amt)}</b>.`:' No sample amount was entered.'}</p>
-      <div class="pdf-sub">Strategic Allocation by Asset Class</div>
-      <table class="pdf-pf"><thead><tr><th>Asset Class</th><th>Strategic Allocation</th><th>Sample Amount</th></tr></thead><tbody>
-        ${p.classes.map(c=>`<tr class="${c.grp?'grp':'sub'}"><td>${c.name}</td><td>${pctF(c.pct,0)}</td><td>${pA(c.amount)}</td></tr>`).join('')}
-        <tr class="tot"><td>TOTAL</td><td>100%</td><td>${pA(p.amt)}</td></tr>
-        <tr><td>Expected Return</td><td>${pctF(PF_MODEL.expReturn)}</td><td>${pHas?fP(p.expIncome)+' / yr':'—'}</td></tr>
-        <tr><td>Expected Risk</td><td>${pctF(PF_MODEL.expRisk)}</td><td></td></tr>
-      </tbody></table>
-      <div class="pdf-sub">Sample Portfolio 1 — Investment Funds</div>
-      <table class="pdf-pf funds"><thead><tr><th>Investment Fund</th><th>Asset Class</th><th>Allocation</th><th>Sample Amount</th></tr></thead><tbody>
-        ${p.funds.map(f=>`<tr><td>${f.name}</td><td>${f.cls}</td><td>${pctF(f.pct,0)}</td><td>${pA(f.amount)}</td></tr>`).join('')}
-        <tr class="tot"><td>TOTAL</td><td></td><td>100%</td><td>${pA(p.amt)}</td></tr>
-      </tbody></table>
-      ${pHas?`
-      <div class="pdf-sub">Alternative for Domestic Fixed Income (75%) — Bond Ladder</div>
-      <table class="pdf-pf"><thead><tr><th>Investment Outlet</th><th>Maturity</th><th>Face Amount</th><th>Indicative Cash Out</th><th>Price</th><th>Gross YTM</th><th>Est. Net Return p.a.</th></tr></thead><tbody>
-        ${p.bonds.map(b=>`<tr><td>${b.code}</td><td>${fmtDate(b.mat)}</td><td>${fP2(b.face)}</td><td>${fP2(b.cashOut)}</td><td>${b.price.toFixed(2)}</td><td>${b.ytm.toFixed(2)}%</td><td>${b.net.toFixed(2)}%</td></tr>`).join('')}
-        <tr class="tot"><td>TOTAL / Weighted average</td><td></td><td>${fP2(p.totFace)}</td><td>${fP2(p.totCash)}</td><td></td><td>${p.wYtm.toFixed(2)}%</td><td>${p.wNet.toFixed(2)}%</td></tr>
-      </tbody></table>
-      <div class="pdf-sub">Indicative Cash Flow — Per Month (net of withholding tax and fees)</div>
-      <table class="pdf-pf cf"><thead><tr><th>Outlet</th><th>Coupon · Freq</th>${PF_MONTHS.map(m=>`<th>${m}</th>`).join('')}</tr></thead><tbody>
-        ${p.bonds.map(b=>`<tr><td>${b.code}</td><td>${b.cpn.toFixed(2)}% · ${PF_FREQ[b.freq]}</td>${b.cf.map(v=>`<td>${v?fmt(v):''}</td>`).join('')}</tr>`).join('')}
-        <tr class="tot"><td>TOTAL</td><td></td>${p.monthly.map(v=>`<td>${fmt(v)}</td>`).join('')}</tr>
-      </tbody></table>
-      <p class="pdf-note">Annual net coupon income: ${fP(p.annualCoupon)} (about ${fP(p.annualCoupon/12)} per month on average).</p>
-      <div class="pdf-keep"><div class="pdf-sub">Tenor Bucket</div>
-      <table class="pdf-pf"><thead><tr><th>Remaining Term</th><th>Total in PHP</th><th>% Allocation</th></tr></thead><tbody>
-        ${p.buckets.map(b=>`<tr><td>${b.label}</td><td>${fmt(b.amount)}</td><td>${pctF(b.pct)}</td></tr>`).join('')}
-        <tr class="tot"><td>TOTAL</td><td>${fmt(p.totFace)}</td><td>100%</td></tr>
-      </tbody></table></div>
-      <p class="pdf-note">Indicative computation only. Prices, gross YTM and estimated net returns are indicative and subject to market conditions at the time of purchase; indicative cash out includes accrued interest. Coupon timing follows each security's schedule from the next coupon date after settlement. Totals may differ by ₱1 due to rounding.</p>`:''}
-      <p style="font-size:7.5pt;font-weight:700;color:#1a1a1a;margin-top:6pt">Indicative and for illustration purposes only. Actual returns may vary. Based on indicative prices as of November 5, 2026, at a management fee of 0.35% p.a., net of taxes.</p>
-    </div>`;
-
-  let verdictTitle,verdictClass;
-  if(c.insufficientCapital){verdictTitle='⚠ Initial Investible Amount Is Not Enough';verdictClass='';}
-  else if(c.annualGap<=0){verdictTitle='✓ Retirement is Fully Funded';verdictClass='ok';}
-  else if(c.yearsFundLasts>=c.period){verdictTitle='✓ You Are On Track';verdictClass='ok';}
-  else if(c.cashShortfall>0){verdictTitle='⚠ Retirement Gap Detected';verdictClass='';}
-  else{verdictTitle='⚠ Your Cash Needs to Work Harder';verdictClass='';}
-
-  const heirsRows=[];
-  if(e.legitChildrenN>0)heirsRows.push({heir:'Legitimate Children',count:e.legitChildrenN,total:e.legitChildTotal,per:e.perLegitChild});
-  if(e.survivingSpouse==='Yes')heirsRows.push({heir:'Surviving Spouse',count:1,total:e.spouseShare,per:e.spouseShare});
-  if(e.illegitChildrenN>0)heirsRows.push({heir:'Illegitimate Children',count:e.illegitChildrenN,total:e.illegitChildTotal,per:e.perIllegitChild});
-  if(e.legitParents==='Yes'&&e.legitChildrenN===0)heirsRows.push({heir:'Legitimate Parents',count:1,total:e.legitParentShare,per:e.legitParentShare});
-
-  document.getElementById('pdfReport').innerHTML=`
-    <div class="pdf-cover">
-      <span class="gold">BPI Wealth Management · Personal Wealth Advisory</span>
-      <h1>Retirement Planning Overview</h1>
-      <div class="sub">Prepared on ${now} &nbsp;·&nbsp; For illustration purposes only</div>
-    </div>
-
-    <div class="pdf-sec">
-      <div class="pdf-sec-title">Client Inputs</div>
-      <div class="pdf-2col">
-        <div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Age</span><span class="pdf-row-val">${c.startAge}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Other Sources of Income</span><span class="pdf-row-val">${fP(c.monthlyIncome)}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Estimated Monthly Expense</span><span class="pdf-row-val">${fP(c.monthlyExpense)}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Expected Years in Retirement</span><span class="pdf-row-val">${c.period} years</span></div>
-                    <div class="pdf-row"><span class="pdf-row-lbl">Annual Inflation (fixed)</span><span class="pdf-row-val">${(c.inf*100).toFixed(2)}%</span></div>
-        </div>
-        <div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Current Amount in Deposits / Cash</span><span class="pdf-row-val">${fP(c.cashAvail)}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Return p.a. of Deposits / Cash (fixed)</span><span class="pdf-row-val">${(c.depositRate*100).toFixed(2)}%</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Current Investments</span><span class="pdf-row-val">${fP(c.currentInvest)}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Return p.a. of Current Investments</span><span class="pdf-row-val">${(c.returnPA*100).toFixed(2)}%</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Family Home (Estimated Value)</span><span class="pdf-row-val">${fP(e.familyHomeValue)}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Other Real Estate</span><span class="pdf-row-val">${fP(e.otherRealEstate)}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Legally Married</span><span class="pdf-row-val">${e.legallyMarried||'—'}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Outstanding Liabilities</span><span class="pdf-row-val">${fP(c.liabilities)}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Planned Big Purchase / One-time Gift</span><span class="pdf-row-val">${fP(c.specialAllot)}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Legitimate Children</span><span class="pdf-row-val">${e.legitChildrenN}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Surviving Spouse</span><span class="pdf-row-val">${e.survivingSpouse}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Illegitimate Children</span><span class="pdf-row-val">${e.illegitChildrenN}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Legitimate Parents Surviving</span><span class="pdf-row-val">${e.legitParents}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Illegitimate Parents Surviving</span><span class="pdf-row-val">${e.illegitParents}</span></div>
-          <div class="pdf-row"><span class="pdf-row-lbl">Family Home — Other Names on Title</span><span class="pdf-row-val">${e.familyHomeOtherOwners}</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pdf-sec">
-      <div class="pdf-sec-title">Retirement Planning Findings</div>
-      <div class="pdf-verdict ${verdictClass}"><h3>${verdictTitle}</h3><p>${document.getElementById('verdictSub').textContent}</p></div>
-      <div class="pdf-sc-box" style="margin-top:8pt">
-        <h3>Option 1 — Default (No additional investment)</h3>
-        <p style="font-size:8pt;color:#555;margin-bottom:6pt">${c.gapFundedByCapital<=0?`Your retirement income sources of ${fP(c.incomeSources)}/year cover your target spending of ${fP(c.monthlyExpense)}/month in full. Your nest egg sustains your desired spending for the full ${c.period}-year period with room to spare.`:c.yearsFundLasts>=c.period?`Given your retirement nest egg earning a blended ${pctS(c.d)} p.a., you will be able to maintain your desired spending of ${fP(c.monthlyExpense)}/month for the full ${c.period} years of your retirement period.`:`Given your retirement nest egg earning a blended ${pctS(c.d)} p.a., you will be able to maintain your desired spending of ${fP(c.monthlyExpense)}/month for only up to ${c.yearsFundLasts} years — short of your ${c.period}-year retirement period.`}</p>
-        <div class="pdf-sc-stats">
-          <div><div class="pdf-stat-label">Years Nest Egg Lasts</div><div class="pdf-stat-val ${c.yearsFundLasts>=c.period?'green':'ruby'}">${c.yearsFundLasts>=c.period?c.period+'+':c.yearsFundLasts} years</div></div>
-          <div><div class="pdf-stat-label">Desired Monthly Spending</div><div class="pdf-stat-val">${fP(c.monthlyExpense)}</div></div>
-        </div>
-      </div>
-      <div class="pdf-sc-box">
-        <h3>Option 2 — Desired Lifestyle (With Additional investment)</h3>
-        <p style="font-size:8pt;color:#555;margin-bottom:6pt">${c.gapFundedByCapital>0&&c.cashShortfall<=0&&c.yearsFundLasts<c.period?`By moving your net retirement capital of ${fP(c.netCash)} into a retirement fund earning ${pctS(c.r)} p.a., you can maintain your monthly expense of ${fP(c.monthlyExpense)}/month for the full ${c.period}-year period. Surplus of ${fP(Math.abs(c.cashShortfall))} — no additional investment required.`:c.gapFundedByCapital<=0||c.cashShortfall<=0?`Your retirement nest egg already fully funds your desired spending of ${fP(c.monthlyExpense)}/month for the full ${c.period}-year period. Surplus of ${fP(Math.abs(c.cashShortfall))} — no additional investment required.`:`If you want to maintain your monthly expense of ${fP(c.monthlyExpense)}/month, you should invest an additional amount of ${fP(c.cashShortfall)} on top of your net retirement capital of ${fP(c.netCash)}, with both placed in a retirement fund earning ${pctS(c.r)} p.a.`}</p>
-        <div class="pdf-sc-stats">
-          <div><div class="pdf-stat-label">Additional Amount to Invest</div><div class="pdf-stat-val ${c.cashShortfall>0?'ruby':'green'}">${c.cashShortfall>0?fP(c.cashShortfall):'Fully funded'}</div></div>
-        </div>
-      </div>
-      <div class="pdf-sc-box">
-        <h3>Option 3 — Adjust your Lifestyle</h3>
-        <p style="font-size:8pt;color:#555;margin-bottom:6pt">${c.gapFundedByCapital<=0||c.sustainableExpense/12>=c.monthlyExpense?`Your desired spending of ${fP(c.monthlyExpense)}/month is already within your sustainable level of ${fP(c.sustainableExpense/12)}/month for the full ${c.period}-year period — no reduction needed.`:`By decreasing your monthly expense to ${fP(c.sustainableExpense/12)}/month, you will be sustained by your retirement nest egg for ${c.period} years.`}</p>
-        <div class="pdf-sc-stats">
-          <div><div class="pdf-stat-label">Sustainable Monthly Expense</div><div class="pdf-stat-val gold">${fP(c.sustainableExpense/12)}</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pdf-sec">
-      <div class="pdf-sec-title navy">Estate Planning Findings</div>
-      <div class="pdf-verdict estate" style="border-left-color:#1a2e4a;background:#f0f4f9">
-        <h3>Estate Summary</h3>
-        <p>${document.getElementById('estateSub').textContent}</p>
-      </div>
-      <div class="pdf-2col" style="margin-bottom:8pt">
-        <div>
-          <div class="pdf-stat"><div class="pdf-stat-label">Gross Estate</div><div class="pdf-stat-val navy">${fP(e.grossEstate)}</div></div>
-          <div class="pdf-stat"><div class="pdf-stat-label">Total Deductions</div><div class="pdf-stat-val">(${fP(e.totalDeductions)})</div></div>
-          ${e.hasSpouse?`<div class="pdf-stat"><div class="pdf-stat-label">Less: Surviving Spouse Share (½)</div><div class="pdf-stat-val">(${fP(e.spouseConjugalShare)})</div></div>`:''}
-          <div class="pdf-stat"><div class="pdf-stat-label">Net Taxable Estate</div><div class="pdf-stat-val ruby">${fP(e.netTaxableEstate)}</div></div>
-        </div>
-        <div>
-          <div class="pdf-stat"><div class="pdf-stat-label">Estate Tax (6%)</div><div class="pdf-stat-val ruby">${fP(e.estateTax)}</div></div>
-          <div class="pdf-stat"><div class="pdf-stat-label">Net Distributable Estate</div><div class="pdf-stat-val green">${fP(e.netAfterTax)}</div></div>
-        </div>
-      </div>
-      <div class="pdf-2col" style="margin-bottom:8pt">
-        <div><div class="pdf-stat"><div class="pdf-stat-label">Total Legitime</div><div class="pdf-stat-val gold">${fP(e.totalLegitme)}</div></div></div>
-        <div><div class="pdf-stat"><div class="pdf-stat-label">Free Portion</div><div class="pdf-stat-val gold">${fP(e.freePortion)}</div></div></div>
-      </div>
-      <table class="pdf-ht">
-        <thead><tr><th>Heir</th><th>Count</th><th>Legitime Amount</th><th>% of Net Estate</th><th>Per Heir</th></tr></thead>
-        <tbody>
-          ${heirsRows.map(r=>`<tr><td>${r.heir}</td><td style="text-align:center">${r.count}</td><td style="text-align:right">${fP(r.total)}</td><td style="text-align:right">${pct(r.total)}</td><td style="text-align:right">${fP(r.per)}</td></tr>`).join('')}
-          <tr class="total-row"><td>Total Legitime</td><td></td><td style="text-align:right">${fP(e.totalLegitme)}</td><td style="text-align:right">${pct(e.totalLegitme)}</td><td>—</td></tr>
-          <tr class="free-row"><td>Free Portion</td><td></td><td style="text-align:right">${fP(e.freePortion)}</td><td style="text-align:right">${pct(e.freePortion)}</td><td>—</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    ${pfSection}
-
-
-    <div class="pdf-footer">
-      <strong>Disclaimer:</strong> The Wealth Planning Calculator is provided solely for general informational and educational purposes. It does not constitute legal, tax, financial, or investment advice. You should consult a qualified Philippine lawyer, CPA, or financial advisor for advice tailored to your specific circumstances.<br><br>
-      Use of the Wealth Planning Calculator does not create any attorney-client, accountant-client, fiduciary, or other professional relationship between you and BPI Wealth, or any of its affiliates.<br><br>
-      The Wealth Planning Calculator is based on general provisions of Philippine law, including the National Internal Revenue Code and Civil Code rules on succession. However, laws, regulations, BIR issuances, and jurisprudence may change at any time, and the Wealth Planning Calculator may not reflect the most current developments.<br><br>
-      The estate tax computations generated by the Wealth Planning Calculator are based on simplified assumptions. For married individuals, all assets are assumed to be conjugal or community property, with one-half (½) attributed to the decedent. The computation includes only the standard deduction and family home deduction, and does not take into account other allowable deductions or specific circumstances that may affect the actual estate tax due.<br><br>
-      Accordingly, all results are estimates only and are indicative in nature. They do not substitute for the advice, review, or certification of a licensed CPA, tax practitioner, or legal professional, and should not be relied upon for tax filing, estate planning, or compliance purposes.<br><br>
-      Generated by Navigate Wealth Planning Calculator · BPI Wealth Management
-    </div>`;
-
-  // The browser names the saved PDF after document.title — swap it for the print, then restore.
-  const _origTitle=document.title;
-  const _restoreTitle=()=>{document.title=_origTitle;window.removeEventListener('afterprint',_restoreTitle);};
-  window.addEventListener('afterprint',_restoreTitle);
-  document.title='Retirement Planning Overview';
-  window.print();
-  setTimeout(_restoreTitle,1000);
-}
 
 
 /* ══════════════════════════════════════════════════════════════
