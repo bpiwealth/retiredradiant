@@ -1981,19 +1981,6 @@ function downloadPDF(){
     <div class="pdf-sec">
       <div class="pdf-sec-title">Retirement Planning Findings</div>
       <div class="pdf-verdict ${verdictClass}"><h3>${verdictTitle}</h3><p>${document.getElementById('verdictSub').textContent}</p></div>
-      <div class="pdf-2col">
-        <div>
-          <div class="pdf-stat"><div class="pdf-stat-label">Total Retirement Fund Needed</div><div class="pdf-stat-val ruby">${c.totalFundRequired>0?fP(c.totalFundRequired):'Fully funded'}</div></div>
-          <div class="pdf-stat"><div class="pdf-stat-label">How Much You Have (Net Retirement Capital)</div><div class="pdf-stat-val">${fP(c.netCash)}</div></div>
-          <div class="pdf-stat"><div class="pdf-stat-label">Additional Fund Needed</div><div class="pdf-stat-val ruby">${c.totalFundRequired>0?fP(c.totalFundRequired):'None'}</div></div>
-          <div class="pdf-stat"><div class="pdf-stat-label">Annual Retirement Gap</div><div class="pdf-stat-val ${c.annualGap>0?'ruby':'green'}">${c.annualGap>0?fP(c.annualGap)+'/yr':'No gap'}</div></div>
-        </div>
-        <div>
-          <div class="pdf-stat"><div class="pdf-stat-label">Fund Duration (desired spending)</div><div class="pdf-stat-val ${c.yearsFundLasts>=c.period?'green':'ruby'}">${c.yearsFundLasts>=c.period?c.period+'+':c.yearsFundLasts} years</div></div>
-          <div class="pdf-stat"><div class="pdf-stat-label">Suggested Monthly Spending</div><div class="pdf-stat-val gold">${fP(c.sustainableExpense/12)}/month</div></div>
-          <div class="pdf-stat"><div class="pdf-stat-label">Shortfall vs. Net Retirement Capital</div><div class="pdf-stat-val ${c.cashShortfall>0?'ruby':'green'}">${c.cashShortfall>0?fP(c.cashShortfall):'None'}</div></div>
-        </div>
-      </div>
       <div class="pdf-sc-box" style="margin-top:8pt">
         <h3>Option 1 — Default (No additional investment)</h3>
         <p style="font-size:8pt;color:#555;margin-bottom:6pt">${c.gapFundedByCapital<=0?`Your retirement income sources of ${fP(c.incomeSources)}/year cover your target spending of ${fP(c.monthlyExpense)}/month in full. Your nest egg sustains your desired spending for the full ${c.period}-year period with room to spare.`:c.yearsFundLasts>=c.period?`Given your retirement nest egg earning a blended ${pctS(c.d)} p.a., you will be able to maintain your desired spending of ${fP(c.monthlyExpense)}/month for the full ${c.period} years of your retirement period.`:`Given your retirement nest egg earning a blended ${pctS(c.d)} p.a., you will be able to maintain your desired spending of ${fP(c.monthlyExpense)}/month for only up to ${c.yearsFundLasts} years — short of your ${c.period}-year retirement period.`}</p>
@@ -2007,8 +1994,6 @@ function downloadPDF(){
         <p style="font-size:8pt;color:#555;margin-bottom:6pt">${c.gapFundedByCapital>0&&c.cashShortfall<=0&&c.yearsFundLasts<c.period?`By moving your net retirement capital of ${fP(c.netCash)} into a retirement fund earning ${pctS(c.r)} p.a., you can maintain your monthly expense of ${fP(c.monthlyExpense)}/month for the full ${c.period}-year period. Surplus of ${fP(Math.abs(c.cashShortfall))} — no additional investment required.`:c.gapFundedByCapital<=0||c.cashShortfall<=0?`Your retirement nest egg already fully funds your desired spending of ${fP(c.monthlyExpense)}/month for the full ${c.period}-year period. Surplus of ${fP(Math.abs(c.cashShortfall))} — no additional investment required.`:`If you want to maintain your monthly expense of ${fP(c.monthlyExpense)}/month, you should invest an additional amount of ${fP(c.cashShortfall)} on top of your net retirement capital of ${fP(c.netCash)}, with both placed in a retirement fund earning ${pctS(c.r)} p.a.`}</p>
         <div class="pdf-sc-stats">
           <div><div class="pdf-stat-label">Additional Amount to Invest</div><div class="pdf-stat-val ${c.cashShortfall>0?'ruby':'green'}">${c.cashShortfall>0?fP(c.cashShortfall):'Fully funded'}</div></div>
-          <div><div class="pdf-stat-label">Total Fund Required<br><span style="font-weight:400;text-transform:none">withdrawals at start of each year</span></div><div class="pdf-stat-val">${fP(c.totalFundRequired)}</div></div>
-          <div><div class="pdf-stat-label">Retirement Period</div><div class="pdf-stat-val">${c.period} yrs</div></div>
         </div>
       </div>
       <div class="pdf-sc-box">
@@ -2016,8 +2001,6 @@ function downloadPDF(){
         <p style="font-size:8pt;color:#555;margin-bottom:6pt">${c.gapFundedByCapital<=0||c.sustainableExpense/12>=c.monthlyExpense?`Your desired spending of ${fP(c.monthlyExpense)}/month is already within your sustainable level of ${fP(c.sustainableExpense/12)}/month for the full ${c.period}-year period — no reduction needed.`:`By decreasing your monthly expense to ${fP(c.sustainableExpense/12)}/month, you will be sustained by your retirement nest egg for ${c.period} years.`}</p>
         <div class="pdf-sc-stats">
           <div><div class="pdf-stat-label">Sustainable Monthly Expense</div><div class="pdf-stat-val gold">${fP(c.sustainableExpense/12)}</div></div>
-          <div><div class="pdf-stat-label">Annual Expense (today's value)</div><div class="pdf-stat-val gold">${fP(c.sustainableExpense)}</div></div>
-          <div><div class="pdf-stat-label">Retirement Period</div><div class="pdf-stat-val">${c.period} yrs</div></div>
         </div>
       </div>
     </div>
